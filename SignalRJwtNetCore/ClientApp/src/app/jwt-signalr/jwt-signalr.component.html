@@ -1,0 +1,23 @@
+<div>
+  <form #form="ngForm" (submit)="ongetjwt(form)">
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <button class="btn btn-success btn-block " type="submit">Get JWT</button>
+        </div>
+        <div innerHtml={{token}}> JWT goes here </div>
+      </div>
+    </div>
+  </form>
+  <form #form="ngForm" (submit)="onconnectToHub(form)">
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <button class="btn btn-success btn-block" type="submit">Connect to hub</button>
+          </div>
+          <textarea  style="min-width: 100%" rows="15">{{messages}}</textarea>
+        </div>
+      </div>
+  </form>
+  <button type="button" (click)="ondisconnectfromhub()">Disconnect</button>
+</div>
